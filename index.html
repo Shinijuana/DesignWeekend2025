@@ -94,17 +94,18 @@
 
   <!-- Esperienza AR con un oggetto -->
   <model-viewer 
-    src="assets/frecce.usdz" 
+    src="assets/frecce.glb" 
     poster="assets/poster.png" 
     tone-mapping="neutral" 
     shadow-intensity="1" 
     ar 
+    position="-5 0 0"
     camera-controls 
     touch-action="pan-y" 
     alt="Un modello 3D di un oggetto"
     autoplay
     animation-loop
-    ios-src="assets/frecce.glb">
+    ios-src="assets/frecce.usdz">
     
     <button slot="ar-button" id="ar-button">
       View in your space
