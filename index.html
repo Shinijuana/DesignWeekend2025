@@ -91,15 +91,7 @@
   </style>
 </head>
 <body>
-    <script>
-  const modelViewer = document.querySelector('model-viewer');
-  modelViewer.addEventListener('ar-button-press', () => {
-    const iosSrc = modelViewer.getAttribute('ios-src');
-    if (iosSrc && /iPad|iPhone|iPod/.test(navigator.userAgent)) {
-      window.location.href = iosSrc; // Forza l'apertura del file .usdz
-    }
-  });
-</script>
+  
   <!-- Esperienza AR con un oggetto -->
   <model-viewer 
     src="assets/frecce.glb" 
