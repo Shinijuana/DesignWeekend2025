@@ -91,7 +91,15 @@
   </style>
 </head>
 <body>
-
+    <script>
+  const modelViewer = document.querySelector('model-viewer');
+  modelViewer.addEventListener('ar-button-press', () => {
+    const iosSrc = modelViewer.getAttribute('ios-src');
+    if (iosSrc && /iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      window.location.href = iosSrc; // Forza l'apertura del file .usdz
+    }
+  });
+</script>
   <!-- Esperienza AR con un oggetto -->
   <model-viewer 
     src="assets/frecce.glb" 
@@ -99,6 +107,7 @@
     tone-mapping="neutral" 
     shadow-intensity="1" 
     ar 
+    ar-modes="quick-look"
     camera-controls
     camera-target="0m 0m 0m"
     touch-action="pan-y" 
@@ -106,6 +115,8 @@
     autoplay
     animation-loop
     ios-src="assets/frecce.usdz">
+    
+
     
     <button slot="ar-button" id="ar-button">
       View in your space
