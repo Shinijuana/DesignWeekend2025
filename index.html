@@ -96,6 +96,7 @@
   <model-viewer 
     src="assets/frecce.glb" 
     poster="assets/poster.png" 
+    ar-scale="fixed"
     tone-mapping="neutral" 
     shadow-intensity="1" 
     ar 
@@ -106,7 +107,9 @@
     autoplay
     animation-loop
     ios-src="assets/frecce.usdz">
-    
+     <effect-composer>
+    <pixelate-effect></pixelate-effect>
+  </effect-composer>
 
     
     <button slot="ar-button" id="ar-button">
