@@ -107,9 +107,16 @@
     autoplay
     animation-loop
     ios-src="assets/frecce.usdz">
-     <effect-composer>
-    <pixelate-effect></pixelate-effect>
-  </effect-composer>
+    
+    <script>
+  const modelViewer = document.querySelector('model-viewer');
+  modelViewer.addEventListener('ar-button-press', () => {
+    const iosSrc = modelViewer.getAttribute('ios-src');
+    if (iosSrc && /iPad|iPhone|iPod/.test(navigator.userAgent)) {
+      window.location.href = iosSrc; // Forza l'apertura del file .usdz
+    }
+  });
+</script>
 
     
     <button slot="ar-button" id="ar-button">
