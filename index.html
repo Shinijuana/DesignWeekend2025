@@ -115,10 +115,13 @@
   
   <!-- Esperienza AR con un oggetto -->
   <model-viewer 
+    environment-image="assets/Courmayeur_01-HDR.hdr" 
+    exposure="2" 
+    shadow-softness="1"
     src="assets/frecce.glb" 
     poster="assets/poster.png" 
     ar-scale="fixed"
-    tone-mapping="neutral" 
+    tone-mapping="aces" 
     shadow-intensity="1" 
     ar 
     ar-modes="webxr scene-viewer quick-look"
